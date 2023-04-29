@@ -20,7 +20,7 @@
     display: flex;
     gap: 2rem;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     .f-content {
       gap: 0.5rem;
     }

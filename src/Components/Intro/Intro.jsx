@@ -13,6 +13,7 @@ import { useContext } from 'react';
 import { themeContext } from '../../Context';
 import { useSpring, animated } from '@react-spring/web'
 import resume from '../Services/Copy of Nmeregini c Johnhenry.pdf'
+import Typewriter from 'typewriter-effect'
 
 
 function Intro(){
@@ -24,16 +25,36 @@ function Intro(){
         from: { x: 100 },
         to: { x: 0 },
       })
+
       
+
       const transition = {duration: 2, type: 'spring'}
     const theme = useContext(themeContext)
   const darkMode =  theme.state.darkMode
     return(
         <div className="intro" id='home'>
             <div className='i-left'>
-            <span className='i-text1' style={{color : darkMode? 'white': ''}}>Hy! I AM</span>
+          <div>
+            </div> 
+            <span className='i-text1' style={{color : darkMode? 'white': ''}}>Hi! my name is</span>
             <span className='i-text2'>Nmeregini Johnhenry</span>
-            <span className='i-text3'>Frontend Developer with a year learning experience in web design and development, i love solving peoblems </span>
+            <span  className='i-text2' style={{color: 'blue'}}> 
+            <Typewriter
+            onInit={(typewriter) => {
+              typewriter
+              .typeString("Software Engineer")
+              .pauseFor(2000)
+              .deleteAll()
+              .typeString("Technical Writer")
+              .deleteAll()
+              .typeString("Frontend Developer")
+              .start()
+            }}
+            />
+              
+            </span>
+           
+            <span className='i-text3' style={{color : darkMode? 'white': ''}}>Hello, i am a Frontend Developer with a year learning experience in web design and development, i love solving peoblems </span>
           <a href={resume}> <button className='button i-button'>Hire Me</button> </a> 
             <div className='i-icons'>
                 <a href='https://github.com/chibuezej'> 

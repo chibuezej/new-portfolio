@@ -32,6 +32,14 @@
     font-size: 10px;
     color: #5290fd;
 }
+@media screen and (max-width: 1050px) and (min-width: 600px){
+    .card{
+     width: 11rem;
+    height: 13rem;
+    gap: 2px;
+    margin-left: 4rem;
+    }
+}
 @media screen and (max-width: 480px){
     .card{
       width: 280px;

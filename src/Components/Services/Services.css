@@ -43,7 +43,20 @@
     top: 13rem;
     left: -18rem;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1050px) and (min-width: 600px){
+    .services {
+        padding: 0 30rem 0 3rem;
+        margin: 18rem 0;
+    }
+    .awesome>:nth-child(1){
+        font-size: 1.5rem;
+        
+    }
+    .awesome>:nth-child(3){
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 600px) {
     .services {
       margin: 0;
       flex-direction: column;
@@ -62,7 +75,7 @@
       position: static;
     }
     .awesome{
-        margin-top: 14rem;
+        margin-top: 18rem;
        
     }
     .awesome>:nth-child(1){
