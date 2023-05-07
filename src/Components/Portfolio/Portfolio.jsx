@@ -19,22 +19,28 @@ function Portfolio(){
             grabCursor={true} 
             className='portfolio-slider'>
                 <SwiperSlide>
-                <img src={Dashboard} alt="" />
+                    <a href="https://responsive-react-dashboard.vercel.app/"> <img src={Dashboard} alt="" /></a>
+               
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={Tenzies} alt="" />
+                    <a href="https://meriles-tenzies-game.netlify.app/"> <img src={Tenzies} alt="" /></a>
+                
                 </SwiperSlide>{" "}
                 <SwiperSlide>
-                <img src={animationPortfolio} alt="" />
+                    <a href="https://my-portfolio-with-animation.netlify.app/"> <img src={animationPortfolio} alt="" /></a>
+               
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={counter} alt="" />
+                    <a href="https://alt-school-counter-exam-vue.vercel.app/">   <img src={counter} alt="" /></a>
+             
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={weatherForecast} alt="" />
+                    <a href="https://react-weather-blond-phi.vercel.app/">  <img src={weatherForecast} alt="" /></a>
+              
                 </SwiperSlide>
                 <SwiperSlide>
-                <img src={memeGenarator} alt="" />
+                    <a href="https://gorgeous-choux-cd7b62.netlify.app/">  <img src={memeGenarator} alt="" /></a>
+               
                 </SwiperSlide>
             </Swiper>
         </div>
