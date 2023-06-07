@@ -75,7 +75,7 @@ function Skills(){
   ];
   return (
     <div
-    id="Skills"
+    id="skills"
     style={{color : darkMode? 'white': ''}}
     name="skills"
     className="bg-gradient-to-w  from-black to-gray-800 w-full text-white h-full"

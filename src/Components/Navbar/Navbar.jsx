@@ -18,40 +18,7 @@ function Navbar(){
     const theme = useContext(themeContext)
     const darkMode =  theme.state.darkMode
     return(
-        // <div id="n-wrapper"  className="flex justify-between items-center w-full h-20 text-white bg-black px-4 fixed ">
-        //  <div id="n-left">
-        //     <div id="n-name">
-        //         Meriles
-        //     </div>
-        //    <Toggle/>
-        //  </div>
-        //  <div id="n-right">
-        //     <div id="n-list" className="px-4 cursor-pointer capitalize font-medium text-gray-400 hover:scale-105 duration-200">
-        //         <ul style={{listStyleType: 'none'}}>
-        //         <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
-        //             <li>Home</li>
-        //             </Link>
-        //             <Link to="Services" spy={true} smooth={true}>
-        //             <li>Services</li>
-        //             </Link>
-        //             <Link to="Experience" spy={true} smooth={true}>
-        //             <li>Experience</li>
-        //             </Link>
-        //             <Link to="Skills" spy={true} smooth={true}>
-        //             <li>Skills</li>
-        //             </Link>
-        //             <Link to="Portfolio" spy={true} smooth={true}>
-        //             <li>Portfolio</li>
-        //             </Link>
-                    
-        //         </ul>
-        //     </div>
-        //     <Link to="contact" spy={true} smooth={true}>
-        //     <button id='button n-button'>Contact Me</button>
-        //     </Link>
-        //  </div>
-        
-        // </div>
+      
         <div style={{color : darkMode? 'white': 'black', backgroundColor : darkMode? 'black' : 'white',}} id='n-wrapper' className="flex justify-between items-center w-full h-20 text-white bg-black pl-1 pr-20 fixed mb:px-4 ">
         <div>
           <Link to="home" spy={true} smooth={true}>

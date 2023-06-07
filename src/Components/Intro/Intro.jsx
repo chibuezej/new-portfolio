@@ -32,7 +32,7 @@ function Intro(){
     const theme = useContext(themeContext)
   const darkMode =  theme.state.darkMode
     return(
-        <div className="intro" id='home'>
+        <div className="intro" id='Home'>
             <div className='i-left'>
           <div>
             </div> 
