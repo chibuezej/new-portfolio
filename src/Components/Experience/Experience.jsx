@@ -8,8 +8,8 @@ function Experience(){
     return(
         <div className="experience" id="Experience">
             <div className="achievment">
-            <div className="circle" style={{color: darkMode?'var(--orange)':''}}>11+</div>
-            <span  style={{color: darkMode?'white':''}}>Months</span>
+            <div className="circle" style={{color: darkMode?'var(--orange)':''}}>3+</div>
+            <span  style={{color: darkMode?'white':''}}>Years</span>
             <span>Experience</span>
             </div>
             <div className="achievment">
@@ -18,7 +18,7 @@ function Experience(){
             <span>Projects</span>
             </div>
             <div className="achievment">
-            <div className="circle" style={{color: darkMode?'var(--orange)':''}}>0</div>
+            <div className="circle" style={{color: darkMode?'var(--orange)':''}}>3</div>
             <span  style={{color: darkMode?'white':''}}>Companies</span>
             <span>work</span>
             </div>

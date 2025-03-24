@@ -12,7 +12,7 @@ import FloatingDiv from '../FloatingDiv/FloatingDiv'
 import { useContext } from 'react';
 import { themeContext } from '../../Context';
 import { useSpring, animated } from '@react-spring/web'
-import resume from '../Services/Copy of Nmeregini c Johnhenry.pdf'
+import resume from '../Services/Nmeregini.pdf';
 import Typewriter from 'typewriter-effect'
 
 

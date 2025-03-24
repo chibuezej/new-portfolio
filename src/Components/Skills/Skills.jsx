@@ -72,6 +72,24 @@ function Skills(){
       title: "Github",
       style: "shadow-red-400",
     },
+    {
+      id: 10,
+      src: ReactImg,
+      title: "React-Native",
+      style: "shadow-blue-600",
+    },
+    {
+      id: 5,
+      src: Css,
+      style: "shadow-blue-500",
+      title: "Chakra-Ui",
+    },
+    {
+      id: 12,
+      src: firebase,
+      title: "Supabase",
+      style: "shadow-yellow-200",
+    },
   ];
   return (
     <div

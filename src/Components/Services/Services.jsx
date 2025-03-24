@@ -3,7 +3,7 @@ import HeartEmoji from "../../img/heartemoji.png"
 import Glasses from "../../img/glasses.png"
 import Card from '../Card/Card';
 import Humble from '../../img/humble.png'
-import resume from './Copy of Nmeregini c Johnhenry.pdf'
+import resume from './Nmeregini.pdf'
 import { useContext } from 'react';
 import { themeContext } from '../../Context';
 
@@ -33,13 +33,13 @@ function Services(){
                 <Card 
             emoji={HeartEmoji}
             heading={'Design'}
-            detail= {'Figma, Canva, Bootsrap'}
+            detail= {'Chakra-ui, Canva, Bootsrap, Next-Js'}
             />
                 </div>
                 <div style={{top: "12rem", left: "-4rem"}}>
                 <Card emoji={Glasses}
                 heading={'Frontend Developer'}
-                detail={"Html, Css, Scss, JavaScript, React"}
+                detail={"Html, Css,JavaScript, React, React Native"}
                 />
                 </div>
                 <div style={{top: '19rem', left: '12rem' }}>
