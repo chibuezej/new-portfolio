@@ -54,7 +54,7 @@ function Intro(){
               
             </span>
            
-            <span className='i-text3' style={{color : darkMode? 'white': ''}}>Hello, i am a Frontend Developer with a year learning experience in web design and development, i love solving peoblems </span>
+            <span className='i-text3' style={{color : darkMode? 'white': ''}}>Hello, i am a Frontend Developer with a year learning experience in <br/> web design and development, i love solving peoblems </span>
           <a href={resume}> <button className='button i-button'>Hire Me</button> </a> 
             <div className='i-icons'>
                 <a href='https://github.com/chibuezej'> 
@@ -63,7 +63,7 @@ function Intro(){
             <a href='https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/'>
                 <img src={LinkedIn} alt=""/></a>
             
-            <img src={Instagram} alt="" />
+      
             </div>
             </div>
          
