@@ -64,9 +64,9 @@ function Intro() {
             <img src={Github} alt="" />{" "}
           </a>
 
-          {/* <a href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/">
+          <a href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/">
             <img src={LinkedIn} alt="" />
-          </a> */}
+          </a>
         </div>
       </div>
 
