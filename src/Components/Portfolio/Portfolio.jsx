@@ -1,5 +1,6 @@
 import './Portfolio.css'
 import {Swiper, SwiperSlide} from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper'
 import Dashboard from '../../img/dashboard.png'
 import Afroverse from '../../img/afroverse.png'
 import Dashify from '../../img/dashify.png'
@@ -11,17 +12,49 @@ import animationPortfolio from '../../img/portfolio.png'
 import counter from '../../img/counterVue.png'
 import weatherForecast from '../../img/Screenshot from 2023-04-07 12-23-36.png'
 import memeGenarator from '../../img/Screenshot from 2023-04-07 12-26-57.png'
+import jego from '../../img/jego.png'
 import 'swiper/css'
+// import 'swiper/css/pagination'
+import { useContext } from 'react'
+import { themeContext } from '../../Context'
 
 function Portfolio(){
+    const theme = useContext(themeContext)
+    const darkMode = theme.state.darkMode
+    
     return(
         <div className='portfolio' id='portfolio'>
-            <span>Recent Projects</span>
-            <span>Portfolio</span>
+            <div className="portfolio-header">
+                <span style={{color: darkMode ? 'white' : ''}}>Recent Projects</span>
+                <span>My Portfolio</span>
+                <p style={{color: darkMode ? 'rgba(255,255,255,0.7)' : ''}}>
+                    Showcasing some of my best work across web and mobile development
+                </p>
+            </div>
             <Swiper 
-            spaceBetween={10} 
-            slidesPerView={4} 
-            grabCursor={true} 
+            modules={[Autoplay, Pagination]}
+            spaceBetween={30} 
+            slidesPerView={3}
+            grabCursor={true}
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                }
+            }}
             className='portfolio-slider'>
               
                 <SwiperSlide>
@@ -34,6 +67,10 @@ function Portfolio(){
                 </SwiperSlide>
                 <SwiperSlide>
                     <a href="https://dashify-template.vercel.app/"> <img src={Dashify} alt="" /></a>
+               
+                </SwiperSlide>
+                   <SwiperSlide>
+                    <a href="https://www.jegopods.com/"> <img src={jego} alt="" /></a>
                
                 </SwiperSlide>
                 <SwiperSlide>

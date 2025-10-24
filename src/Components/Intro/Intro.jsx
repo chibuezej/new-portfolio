@@ -14,107 +14,143 @@ import { themeContext } from "../../Context";
 import { useSpring, animated } from "@react-spring/web";
 import resume from "../Services/Nmeregini.pdf";
 import Typewriter from "typewriter-effect";
+// Import profile image for avatar
+import profileAvatar from "../../img/avater.jpeg";
 
 function Intro() {
   const springs = useSpring({
-    from: { x: 0 },
-    to: { x: 100 },
+    from: { opacity: 0, transform: "translateY(20px)" },
+    to: { opacity: 1, transform: "translateY(0px)" },
+    config: { duration: 1000 },
   });
-  const spring = useSpring({
-    from: { x: 100 },
-    to: { x: 0 },
+  
+  const imageSpring = useSpring({
+    from: { opacity: 0, transform: "scale(0.8)" },
+    to: { opacity: 1, transform: "scale(1)" },
+    config: { duration: 1200 },
   });
 
-  const transition = { duration: 2, type: "spring" };
+  const floatAnimation = useSpring({
+    from: { transform: "translateY(0px)" },
+    to: async (next) => {
+      while (true) {
+        await next({ transform: "translateY(-20px)" });
+        await next({ transform: "translateY(0px)" });
+      }
+    },
+    config: { duration: 2000 },
+  });
+
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+  
   return (
     <div className="intro" id="Home">
-      <div className="i-left">
-        <div></div>
+      <animated.div className="i-left" style={springs}>
+    
+        
+        <div className="i-badge">
+          <span className="badge-text">Available for Work</span>
+        </div>
+        
         <span className="i-text1" style={{ color: darkMode ? "white" : "" }}>
-          Hi! my name is
+          Hi! I'm
         </span>
+        
         <span className="i-text2">Nmeregini Johnhenry</span>
-        <span className="i-text2" style={{ color: "blue" }}>
+        
+        <div className="i-typewriter">
           <Typewriter
-            onInit={(typewriter) => {
-              typewriter
-                .typeString("Software Engineer")
-                .pauseFor(2000)
-                .deleteAll()
-                .typeString("Technical Writer")
-                .deleteAll()
-                .typeString("Frontend Developer")
-                .start();
+            options={{
+              strings: [
+                "Frontend Developer",
+                "Mobile App Developer", 
+                "React Expert",
+                "Flutter Developer"
+              ],
+              autoStart: true,
+              loop: true,
+              deleteSpeed: 50,
+              delay: 80,
             }}
           />
-        </span>
+        </div>
 
-        <span className="i-text3" style={{ color: darkMode ? "white" : "" }}>
-          Hello, i am a Frontend Developer with a year learning experience in{" "}
-          <br /> web design and development, i love solving peoblems{" "}
+        <span className="i-text3" style={{ color: darkMode ? "rgba(255,255,255,0.8)" : "" }}>
+          Frontend Developer with <strong>3+ years of experience</strong> crafting exceptional 
+          digital experiences. Specialized in building scalable web and mobile applications 
+          using <strong>React, Next.js, Flutter & React Native</strong>. Successfully deployed 
+          apps to production with <strong>50K+ downloads</strong>.
         </span>
-        <a href={resume}>
-          {" "}
-          <button className="button i-button">Hire Me</button>{" "}
-        </a>
-        <div className="i-icons">
-          <a href="https://github.com/chibuezej">
-            <img src={Github} alt="" />{" "}
+        
+        <div className="i-tech-stack">
+          <span className="tech-label" style={{ color: darkMode ? "rgba(255,255,255,0.6)" : "" }}>
+            Tech Stack
+          </span>
+          <div className="tech-icons">
+            <span className="tech-item">React</span>
+            <span className="tech-item">Next.js</span>
+            <span className="tech-item">TypeScript</span>
+            <span className="tech-item">Flutter</span>
+            <span className="tech-item">React Native</span>
+          </div>
+        </div>
+        
+        <div className="i-buttons">
+          <a href={resume} download>
+            <button className="button i-button-primary">Download CV</button>
           </a>
-
-          <a href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/">
-            <img src={LinkedIn} alt="" />
+          <a href="#Contact">
+            <button className="button i-button-secondary" style={{
+              background: darkMode ? "transparent" : "transparent",
+              color: darkMode ? "white" : "var(--orange)",
+              border: darkMode ? "2px solid white" : "2px solid var(--orange)"
+            }}>
+              Let's Talk
+            </button>
           </a>
         </div>
-      </div>
+        
+        <div className="i-icons">
+          <a href="https://github.com/chibuezej" target="_blank" rel="noopener noreferrer">
+            <img src={Github} alt="Github" />
+          </a>
+          <a href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/" target="_blank" rel="noopener noreferrer">
+            <img src={LinkedIn} alt="LinkedIn" />
+          </a>
+        </div>
+      </animated.div>
 
-      <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
-        <img src={boy} alt="" className="profile" />
-        <animated.img
-          transition={transition}
-          style={{ ...springs }}
-          src={glassesimoji}
-          alt=""
-          springs
-        />
+      <animated.div className="i-right" style={imageSpring}>
+        <div className="image-container">
+    <animated.img 
+            src={profileAvatar} 
+            alt="Nmeregini Johnhenry" 
+            className="image-background"
+            style={imageSpring}
+          />
+        </div>
+      
         <animated.div
-          className="floating-div"
+          className="floating-div floating-1"
+          style={floatAnimation}
+        >
+          <FloatingDiv image={Crown} txt1="3+ Years" txt2="Experience" />
+        </animated.div>
+        
+        <animated.div
+          className="floating-div floating-2"
           style={{
-            top: "-4%",
-            left: "50%",
-            transition: "ease-in-out 5s",
-            ...spring,
+            ...floatAnimation,
+            delay: 1000,
           }}
         >
-          <FloatingDiv image={Crown} txt1="Web" txt2="Developer" />
+          <FloatingDiv image={thumbup} txt1="4 Companies" txt2="Worked For" />
         </animated.div>
-        <animated.div
-          className="floating-div"
-          style={{
-            top: "18rem",
-            left: "-15rem",
-            transition: "ease-in-out 5s",
-            ...springs,
-          }}
-        >
-          <FloatingDiv image={thumbup} txt1="Learning" txt2="Daily" />
-        </animated.div>
-        <div className="blur" style={{ background: "rgb(238 210 255" }}></div>
-        <div
-          className="blur"
-          style={{
-            background: "#c1f5ff",
-            top: "17rem",
-            width: "21rem",
-            height: "11rem",
-            left: "-9rem",
-          }}
-        ></div>
-      </div>
+{/*         
+        <div className="blur blur-1"></div>
+        <div className="blur blur-2"></div> */}
+      </animated.div>
     </div>
   );
 }

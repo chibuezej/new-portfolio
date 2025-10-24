@@ -1,18 +1,42 @@
-.floatingdiv{
+.floatingdiv {
     justify-content: space-around;
     display: flex;
-    background: white;
-    box-shadow: var(--boxShadow);
-    border-radius: 17px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
     align-items: center;
     padding: 0px 28px 0px 0px;
     height: 4.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.floatingdiv>img{
-    transform: scale(0.4);
+.floatingdiv:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
 }
-.floatingdiv>span{
-    font-family: sans-serif;
+
+/* Dark mode floating div */
+.dark-mode .floatingdiv {
+    background: rgba(22, 33, 62, 0.9);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.floatingdiv > img {
+    transform: scale(0.4);
+    transition: transform 0.3s ease;
+}
+
+.floatingdiv:hover > img {
+    transform: scale(0.45);
+}
+
+.floatingdiv > span {
+    font-family: 'Inter', sans-serif;
     font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }

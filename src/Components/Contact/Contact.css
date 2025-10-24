@@ -1,10 +1,16 @@
 .contact-form{
-    padding: 0 3rem 0 3rem;
+    padding: 4rem 3rem;
     display: flex;
-    height: 80vh;
+    gap: 4rem;
+    min-height: 90vh;
     margin-top: 4rem;
-      /* scroll */
-  padding-top: 3rem;
+    align-items: center;
+}
+
+.w-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .c-right{
@@ -13,47 +19,163 @@
     position: relative;
     flex: 1;
 }
+
 .awesome-contact{
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 1rem;
 }
-.awesome-contact>:nth-child(1){
-    color: var(--black);
-    font-size: 2.5rem;
-    font-weight: bold;
+
+.awesome-contact>:nth-child(1) {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
-.awesome-contact>:nth-child(2){
-    color: var(--orange);
-    font-size: 2.5rem;
-    font-weight: bold;
+
+.awesome-contact>:nth-child(2) {
+    font-size: 2.8rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
 }
-.awesome-contact>:nth-child(3){
-    color: var(--gray);
-    font-size: 15px;
-    margin-top: 1rem;
+
+.awesome-contact>:nth-child(3) {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
 }
-.c-right>form
-{
+
+.awesome-contact>:nth-child(3) strong {
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+.contact-stats{
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-stat-item{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    
+    gap: 0.3rem;
 }
 
-.c-right .user{
-    width: 20rem;
-    height: 2rem;
-    padding: 0.3em;
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.c-right>form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--glass-border);
+}
+
+/* Dark mode form */
+.dark-mode .c-right>form {
+    background: rgba(22, 33, 62, 0.9);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.c-right .user {
+    width: 100%;
+    padding: 1rem 1.2rem;
     outline: none;
-    border: 2px solid var(--orange);
-    border-radius: 8px;
-    font-size: 16px;   
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: var(--bg-primary);
+    color: var(--text-primary);
 }
 
-textarea{
-    height: 4rem!important;
+.c-right .user:focus {
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Dark mode inputs */
+.dark-mode .c-right .user {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .c-right .user:focus {
+    border-color: var(--accent-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+textarea.user{
+    min-height: 150px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.send-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(252, 166, 31, 0.4);
+}
+
+.send-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(252, 166, 31, 0.5);
+}
+
+.success-message{
+    color: #10b981;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.8rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .c-blur1{
@@ -61,18 +183,81 @@ textarea{
     left: 8rem;
 }
 
-@media screen and (max-width: 600px) {
-    .contact-form{
-        padding: 0 1.5rem;
-        flex-direction: column;
-        gap: 2rem;
-        height: 40rem;
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .contact-form {
+        padding: 3.5rem 2rem;
+        gap: 3rem;
     }
-    .c-right .user{
-        width: 16rem;
+    
+    .awesome-contact>:nth-child(2) {
+        font-size: 2.5rem;
     }
-    .c-right>form{
-        gap: 1rem;
-    }
+}
 
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .contact-form{
+        padding: 3rem 1.5rem;
+        flex-direction: column;
+        gap: 2.5rem;
+        min-height: auto;
+    }
+    
+    .w-left {
+        width: 100%;
+    }
+    
+    .c-right {
+        width: 100%;
+    }
+    
+    .awesome-contact>:nth-child(1){
+        font-size: 1rem;
+    }
+    
+    .awesome-contact>:nth-child(2){
+        font-size: 2rem;
+    }
+    
+    .awesome-contact>:nth-child(3){
+        font-size: 0.95rem;
+    }
+    
+    .contact-stats{
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .stat-number{
+        font-size: 1.5rem;
+    }
+    
+    .c-right>form{
+        padding: 2rem 1.5rem;
+        max-width: 100%;
+    }
+    
+    .c-right .user{
+        width: 100%;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .contact-form {
+        padding: 2rem 1rem;
+    }
+    
+    .awesome-contact>:nth-child(2) {
+        font-size: 1.8rem;
+    }
+    
+    .awesome-contact>:nth-child(3) {
+        font-size: 0.9rem;
+    }
+    
+    .c-right>form {
+        padding: 1.5rem 1rem;
+    }
 }   

@@ -32,47 +32,61 @@ function Contact() {
 
   return (
     <div className="contact-form" id="contact">
-      {/* left side copy and paste from work section */}
+
       <div className="w-left">
         <div className="awesome-contact">
-          {/* darkMode */}
           <span style={{ color: darkMode ? "white" : "" }}>Get in Touch</span>
-          <span>Contact me</span>
-          <span>
-            I have gained more experience and am currently looking for a
-            junior-level role in React or React Native. <br/>I am also interested in
-            freelancing opportunities and internships to further enhance my
-            skills.<br/> My goal is to work on as many projects as possible, so if
-            you have any opportunities, feel free to contact me using the form
+          <span>Let's Work Together</span>
+          <span style={{ color: darkMode ? "rgba(255,255,255,0.8)" : "" }}>
+            I'm a <strong>mid-senior software frontend engineer</strong> with extensive experience 
+            in <strong>web development</strong> and <strong>Flutter</strong>. I'm passionate about 
+            building exceptional user experiences and scalable applications.
+            <br/><br/>
+            Whether you're looking for collaboration, have a project in mind, or just want 
+            to connect, feel free to reach out using the form.
           </span>
+      
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
           ></div>
         </div>
       </div>
-      {/* right side form */}
+
       <div className="c-right">
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" className="user" placeholder="Name" />
+          <input 
+            type="text" 
+            name="name" 
+            className="user" 
+            placeholder="Your Name" 
+            required 
+          />
           <input
             type="email"
             name="email"
             className="user"
-            placeholder="Email"
+            placeholder="Your Email"
+            required
           />
-          <textarea name="message" className="user" placeholder="Message" />
+          <textarea 
+            name="message" 
+            className="user" 
+            placeholder="Tell me about your project..."
+            required
+          />
           <button
             type="submit"
             value="Send"
-            className="button"
-            style={{ color: darkMode ? "white" : "black" }}
+            className="send-button"
           >
-            SEND
+            Send Message
           </button>
-          <span>
-            {done && "Thanks for reaching out i will get back to you soonest"}
-          </span>
+          {done && (
+            <span className="success-message">
+              ✓ Thank you for reaching out! I'll get back to you soon.
+            </span>
+          )}
           <div
             className="blur c-blur1"
             style={{ background: "var(--purple)" }}

@@ -1,33 +1,68 @@
 .services {
-    padding: 0 3rem 0 3rem;
+    padding: 6rem 3rem;
     display: flex;
-    height: 90vh;
-    margin: 13rem 0rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin: 2rem 0;
 }
+
 .awesome{
     display: flex;
     flex-direction: column;
     position: relative;
+    gap: 1.5rem;
+    max-width: 900px;
 }
-.awesome>:nth-child(1){
-    color: var(--black);
-    font-size: 2.5rem;
-    font-weight: bold;
+
+.awesome>:nth-child(1) {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
-.awesome>:nth-child(2){
-    color: var(--orange);
-    font-size: 2.5rem;
-    font-weight: bold;
+
+.awesome>:nth-child(2) {
+    font-size: 3.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
-.awesome>:nth-child(3){
-    color: var(--gray);
-    font-size: 15px;
-    margin-top: 1rem;
+
+.awesome>:nth-child(3) {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-top: 0rem;
+    transition: color 0.3s ease;
+}
+
+.about-text {
+    line-height: 1.9;
+    max-width: 800px;
+    color: var(--text-secondary);
+    font-weight: 400;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.about-text strong {
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
 }
 .s-button{
-    width: 10rem;
-    height: 3rem;
-    margin-top: 1rem;
+    width: auto;
+    padding: 0.9rem 2.5rem;
+    margin-top: 1.5rem;
 }
 .cards{
     position: relative;
@@ -43,53 +78,81 @@
     top: 13rem;
     left: -18rem;
 }
-@media screen and (max-width: 1050px) and (min-width: 600px){
+/* Tablet Landscape */
+@media screen and (max-width: 1200px) {
     .services {
-        padding: 0 30rem 0 3rem;
-        margin: 18rem 0;
+        padding: 5rem 2.5rem;
     }
-    .awesome>:nth-child(1){
-        font-size: 1.5rem;
-        
+    
+    .awesome {
+        max-width: 800px;
     }
-    .awesome>:nth-child(3){
-        font-size: 13px;
+    
+    .awesome>:nth-child(2) {
+        font-size: 3rem;
     }
 }
+
+/* Tablet Portrait */
+@media screen and (max-width: 1050px) and (min-width: 600px){
+    .services {
+        padding: 4rem 2rem;
+    }
+    
+    .awesome>:nth-child(1){
+        font-size: 1rem;
+    }
+    
+    .awesome>:nth-child(2){
+        font-size: 2.5rem;
+    }
+    
+    .about-text{
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
 @media screen and (max-width: 600px) {
     .services {
-      margin: 0;
-      flex-direction: column;
-      gap: 3rem;
-      height: 66rem;
-      padding:  1rem 2rem;
-     
+        margin: 2rem 0;
+        padding: 3rem 1.5rem;
+        min-height: auto;
     }
   
-    .cards {
-      display: flex;
-      flex-direction: column;
-      gap: 17rem;
-    }
-    .cards > * {
-      position: static;
-    }
     .awesome{
-        margin-top: 18rem;
-       
+        gap: 1rem;
     }
+    
     .awesome>:nth-child(1){
-        font-size: 1.5rem;
+        font-size: 0.9rem;
     }
+    
     .awesome>:nth-child(2){
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
-    .awesome>:nth-child(3){
-        font-size: 13px;
+    
+    .about-text{
+        font-size: 1rem;
+        line-height: 1.7;
     }
-    .card{
-        width: 258px;
-        margin: auto;
-        height: 7rem;
+    
+    .s-button{
+        width: 100%;
     }
-  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .services {
+        padding: 2rem 1rem;
+    }
+    
+    .awesome>:nth-child(2) {
+        font-size: 1.8rem;
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+    }
+}

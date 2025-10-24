@@ -4,24 +4,142 @@
     margin: -0.5rem -3.5rem;
     position: relative;
     margin-top: -7rem;
-  }
-  .f-content {
-    position: absolute;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-tertiary) 100%);
+    padding: 8rem 0 3rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.f-content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 4rem;
-    gap: 4rem;
-    color: white;
-  }
-  .f-icons {
+    gap: 2rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.footer-email {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.f-icons {
     display: flex;
     gap: 2rem;
-  }
-  @media screen and (max-width: 600px) {
-    .f-content {
-      gap: 0.5rem;
+}
+
+.f-icons a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+.f-icons a:hover {
+    transform: translateY(-8px) scale(1.15);
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+}
+
+.dark-mode .f-icons a {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.f-icons a img {
+    filter: brightness(0) invert(0.5);
+    transition: filter 0.3s ease;
+}
+
+.dark-mode .f-icons a img {
+    filter: brightness(0) invert(1);
+}
+
+.f-icons a:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-copyright:hover {
+    opacity: 1;
+}
+  
+/* Tablet */
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding: 6rem 0 2.5rem;
     }
-  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 5rem 0 2rem;
+    }
+    
+    .f-content {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    .footer-email {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .f-icons {
+        gap: 1.5rem;
+    }
+    
+    .f-icons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .f-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .footer-copyright {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 4rem 0 1.5rem;
+    }
+    
+    .f-icons {
+        gap: 1rem;
+    }
+    
+    .f-icons a {
+        width: 40px;
+        height: 40px;
+    }
+}

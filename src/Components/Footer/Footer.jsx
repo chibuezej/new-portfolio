@@ -9,12 +9,36 @@ const Footer = () => {
     <div className="footer">
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
-        <span>Johnhenrychibueze@gmail.com</span>
+        <span className="footer-email">Johnhenrychibueze@gmail.com</span>
         <div className="f-icons">
-          <Insta color="white" size={"3rem"} />
-          <Linkedin color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
+          <a 
+            href="https://www.instagram.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <Insta color="white" size={"3rem"} />
+          </a>
+          <a 
+            href="https://www.linkedin.com/in/johnhenry-chibueze-b01ba41b3/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Linkedin color="white" size={"3rem"} />
+          </a>
+          <a 
+            href="https://github.com/chibuezej" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <Gitub color="white" size={"3rem"} />
+          </a>
         </div>
+        <p className="footer-copyright">
+          © {new Date().getFullYear()} Nmeregini Johnhenry. All rights reserved.
+        </p>
       </div>
     </div>
   );
