@@ -321,11 +321,23 @@
 .image-background{
     position: absolute;
     width: 400px;
-    height: 400px;
+    height: 450px;
     /* background: linear-gradient(135deg, rgba(255, 136, 0, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%); */
-    border-radius: 50%;
+    border-radius: 20px;
     z-index: 0;
     /* animation: rotate 20s linear infinite; */
+    object-fit: cover;
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #fdc50f 0%, #fb982f 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 20px 60px rgba(252, 166, 31, 0.25), 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.image-background:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(252, 166, 31, 0.35), 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes rotate {
@@ -495,7 +507,7 @@
     
     .image-background{
         width: 320px;
-        height: 320px;
+        height: 380px;
     }
     
     .floating-1{
@@ -603,7 +615,7 @@
     
     .image-background{
         width: 250px;
-        height: 250px;
+        height: 300px;
     }
     
     .floating-1,
@@ -642,6 +654,6 @@
     
     .image-background {
         width: 220px;
-        height: 220px;
+        height: 270px;
     }
 }
