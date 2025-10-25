@@ -17,19 +17,17 @@ function Services() {
                 <span style={{ color: darkMode ? 'white' : '' }}>About Me</span>
                 <span>My Expertise</span>
                 <span style={{ color: darkMode ? 'white' : '' }} className="about-text">
-                    Hi, I'm Nmeregini Johnhenry, a passionate <strong>Frontend Developer</strong> with <strong>3+ years 
-                    of professional experience</strong> building innovative digital solutions. I specialize in crafting 
-                    responsive web applications with <strong>React and Next.js</strong>, and mobile apps using 
-                    <strong> Flutter and React Native</strong>.
+                    Hi, I'm Nmeregini Johnhenry — a <strong>Frontend Developer</strong> with over <strong>3 years of experience</strong> building modern, user-focused digital solutions across web and mobile platforms.
                     <br /><br />
-                    Throughout my career, I've had the privilege of working with <strong>4 organizations</strong>, 
-                    delivering high-quality products that users love. One of my proudest achievements is successfully 
-                    deploying the <strong>Jego app</strong> to both the <strong>Play Store and App Store</strong>, 
-                    reaching thousands of users worldwide.
+                    I began my tech journey at <strong>AltSchool Africa</strong>, where I deepened my understanding of frontend development and connected with like-minded innovators. Shortly after, I joined <strong>Keza Africa</strong> as a Frontend Developer, building responsive web applications using <strong>React, Next.js, Chakra UI, and Tailwind CSS</strong> while integrating APIs to deliver dynamic user experiences.
                     <br /><br />
-                    I'm proficient in <strong>JavaScript, TypeScript, and Dart</strong>, and I leverage modern CSS 
-                    frameworks like <strong>Tailwind CSS, Material UI, and Chakra UI</strong> to create stunning, 
-                    user-friendly interfaces.
+                    I later transitioned into freelancing at <strong>First Registrars</strong>, where I expanded my skill set using <strong>React and Material UI</strong> to deliver clean, efficient interfaces. My growing interest in mobile development led me to learn <strong>React Native</strong>, which I applied during my time at <strong>Tech Amaka</strong>, contributing to the development of <strong>Labtraca</strong>, a mobile app that enables users to order lab kits and first aid treatments.
+                    <br /><br />
+                    Currently, I serve as the <strong>Frontend Lead at JéGO</strong>, where I oversee the development of both web and mobile experiences. On the web, I leverage <strong>Next.js and Tailwind CSS</strong> to create scalable and performant interfaces, while on the mobile side, I use <strong>Flutter</strong> to deliver smooth, cross-platform experiences. I also manage deployments using <strong>Codemagic</strong> and maintain content management through <strong>Sanity CMS</strong>.
+                    <br /><br />
+                    Over the years, I've successfully collaborated with multiple teams across <strong>four organizations</strong>, delivering products that users love — including the successful deployment of the <strong>JéGO app</strong> to both the <strong>Play Store and App Store</strong>, reaching <strong>thousands of users worldwide</strong>.
+                    <br /><br />
+                    My technical expertise spans <strong>JavaScript, TypeScript, Dart</strong>, and modern frameworks such as <strong>React, Next.js, React Native, and Flutter</strong>, complemented by <strong>Tailwind CSS, Material UI, and Chakra UI</strong> for design excellence.
                 </span>
                 <a href={resume} download>
                     <button className='button s-button'>Download CV</button>
